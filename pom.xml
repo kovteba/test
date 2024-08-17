@@ -46,7 +46,7 @@
                 </dependencies>
                 <configuration>
                     <sourceDirectory>./source</sourceDirectory>
-                    <outputDirectory>./book</outputDirectory>
+                    <outputDirectory>./</outputDirectory>
                     <!-- Attributes common to all output formats -->
                     <!-- <attributes>-->
                     <!--    <sourcedir>${project.build.sourceDirectory}</sourcedir>-->
