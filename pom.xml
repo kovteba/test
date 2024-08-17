@@ -45,7 +45,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <sourceDirectory>./source</sourceDirectory>
+                    <sourceDirectory>book</sourceDirectory>
                     <outputDirectory>./</outputDirectory>
                     <!-- Attributes common to all output formats -->
                     <!-- <attributes>-->

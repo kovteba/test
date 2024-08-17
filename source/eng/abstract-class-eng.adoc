@@ -1,0 +1,85 @@
+ifndef::imagesdir[:imagesdir: ../../imgs]
+ifndef::arraydir[:arraydir: ../../../examples/java/src/main/java/kovteba/core/array]
+ifndef::arraytestdir[:arraytestdir: ../../../examples/java/src/test/java/kovteba/datatypes]
+
+== What is the difference between an abstract class and an interface? When should you use an abstract class and when should you use an interface?
+
++ In Java, a class can implement multiple interfaces at the same time, but inherit from only one class.
++ Abstract classes are used only when there is an "is a" relationship type. Interfaces can be implemented by classes that are not related to each other.
++ An abstract class is a means of avoiding repetitive code, a tool for partial implementation of behavior. An interface is a means of expressing the semantics of a class, a contract describing its capabilities. All interface methods are implicitly declared as `public abstract` or (since Java 8) `default` - methods with a default implementation, and fields are `public static final`.
++ Interfaces allow you to create type structures without hierarchy.
++ By inheriting from an abstract class, a class "dissolves" its own individuality. By implementing an interface, it extends its own functionality.
+
+Abstract classes contain a partial implementation, which is supplemented or extended in subclasses. In this case, all subclasses are similar to each other in terms of the implementation inherited from the abstract class and differ only in terms of their own implementation of the abstract methods of the parent. Therefore, abstract classes are used in the case of building a hierarchy of homogeneous, very similar classes. In this case, inheritance from an abstract class that implements the default behavior of an object can be useful, since it allows you to avoid writing duplicate code. In all other cases, it is better to use interfaces.
+
+== What has a higher level of abstraction: a class, an abstract class or an interface?
+Interface.
+
+== Immutable class
+__Immutable class__ is a class whose state cannot be changed after creation.
+Example: `String` is the best example of an immutable class. Once you create a string, you cannot change it.
+
+An immutable class is very easy to understand, it has only one state.
+Immutable classes are thread-safe. This is the biggest advantage of an immutable class, because you do not need to use synchronization for immutable objects. Also, immutable class can be useful when putting an immutable class object into a HashMap or can be used for caching purposes, since its value will not change. Immutable objects are thread-safe by default.
+
+__Creating an immutable class:__
+- __Finalize your class:__
+If you finalize your class - no class can extend it, therefore, they will not be able to override the methods of this class.
+- __Mark all class variables with private and final access modifiers:__
+If you make an instance variable `private` - no outside class will be able to access the instance variables, and if you make them `final` - you will not be able to change them.
+- __Say "no" to mutator methods:__
+Don't create a setter method for some class variables, then there will be no way to explicitly change the state of the instance variables.
+- __Clone mutable objects when returning from a getter:__
+If you return a clone of an object from a getter, the object will be returned. Your original object will remain unchanged.
+
+[source,java]
+----
+class ImmutableClass {
+   private String name;
+   private String value;
+
+   public ImmutableClass(String name, String value) {
+      this.name = name;
+      this.value = value;
+      System.out.println("New ImmutableClass created! Name " + this.name + " value " + this.value);
+   }
+
+   public ImmutableClass setName(String name) {
+      return new ImmutableClass(name, this.value);
+   }
+
+   public ImmutableClass setValue(String value) {
+      return new ImmutableClass(this.name, value);
+   }
+
+   public String getName() {
+      return name;
+   }
+
+   public String getValue() {
+      return value;
+   }
+
+   @Override
+   public boolean equals(Object o) {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) return false;
+      ImmutableClass that = (ImmutableClass) o;
+      return Objects.equals(name, that.name) &&
+          Objects.equals(value, that.value);
+   }
+
+   @Override
+   public int hashCode() {
+      return Objects.hash(name, value);
+   }
+
+   @Override
+   public String toString() {
+      return "ImmutableCat{" +
+          "breed='" + name + '\'' +
+          ", eyeColor='" + value + '\'' +
+          '}';
+   }
+}
+----
