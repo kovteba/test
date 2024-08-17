@@ -2,6 +2,9 @@ ifndef::imagesdir[:imagesdir: ../../imgs]
 ifndef::arraydir[:arraydir: ../../../examples/java/src/main/java/kovteba/core/array]
 ifndef::arraytestdir[:arraytestdir: ../../../examples/java/src/test/java/kovteba/datatypes]
 
+== NEW ROW
+
+
 == 11123Чем абстрактный класс отличается от интерфейса? В каких случаях следует использовать абстрактный класс, а в каких интерфейс?
 
 + В Java класс может одновременно реализовать несколько интерфейсов, но наследоваться только от одного класса.
