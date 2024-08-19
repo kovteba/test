@@ -1,0 +1,7 @@
+ifndef::sourcedir[:sourcedir: ../source]
+
+
+[id=chain-{lang}]
+== JAVA core {lang}
+
+include::{sourcedir}/ukr/data-types.adoc[]

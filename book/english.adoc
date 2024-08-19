@@ -4,4 +4,4 @@ ifndef::sourcedir[:sourcedir: ../source]
 [id=chain-{lang}]
 == JAVA core {lang}
 
-include::{sourcedir}/{lang}/data-types.adoc[]
+include::{sourcedir}/eng/data-types.adoc[]
