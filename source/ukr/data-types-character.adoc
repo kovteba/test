@@ -1,0 +1,7 @@
+ifndef::imagesdir[:imagesdir: ../../imgs]
+ifndef::datatypedir[:datatypedir: ../../examples/src/main/java]
+ifndef::datatypetestdir[:datatypetestdir: ../../examples/src/test/java]
+
+[#java-data-types-character]
+==== Character
+Є обгорткою для примітива `char`. Створення можливо за допомогою конструктора та через строкового літерала. Розмір змінної складає 16 bits.

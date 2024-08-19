@@ -1,0 +1,52 @@
+ifndef::imagesdir[:imagesdir: ../../imgs]
+ifndef::datatypedir[:datatypedir: ../../examples/src/main/java]
+ifndef::datatypetestdir[:datatypetestdir: ../../examples/src/test/java]
+
+[#java-data-types]
+=== Data types
+Data types in Java are divided into primitives and forces. Below is a complete list of data types in Java:
+
+* <<java-data-types-byte, `(Byte)byte`>>
+* <<java-data-types-short, `(Short)short`>>
+* << java-data-types-integer, `(Integer)int`>>
+* <<java-data-types-string, `String`>>
+* `long`
+* `float`
+* `double`
+* `boolean`
+* ` char` We will go into more detail on the skin below.
+
+Values of variables: * Numbers are initialized `0` or `0.0`;
+* `char` - `\u0000`;
+* `boolean` - `false`;
+* Objects - `null`.
+
+[source,java]
+----
+include::{datatypedir}/DataType.java[tags=DataType]
+----
+
+Local variables need to be initialized immediately when the script is created, the compiler will show the error `java: variable a might not have been initialized` .
+
+Operations with such variables may not be atomic, for example `double` and `long`, they can be written in two bits, first the older ones and then the younger ones. To hide this you can use `volatile`.
+
+There may also be cases of overflow/underflow problems, when the value assigned to the variable is more than acceptable or less than acceptable.
+
+image::cast-type.png[]
+
+image::shellclasses.png[]
+
+=== Autoboxing in Java
+*Autoboxing* is a mechanism for implicit initialization of wrapper class objects (`Byte`, `Short`, `Integer`, ` Long`, `Float`, `Double`, `Character`, `Boolean`) with the values of their corresponding original primitive types (`byte`, `short`, `int`...), without explicitly using the class constructor.
+
+* Autoboxing occurs when a primitive is directly assigned to a wrapper class (using the `=` operator), or when a primitive is passed to the parameters of a method (of the wrapper class type).
+* Both primitive type variables and compile-time constants can be auto-boxed into wrapper classes (literals and `final` primitives). In this case, literals must be syntactically correct for initialization of a variable of the original primitive type.
+* Autoboxing of variables of primitive types requires an exact match between the type of the original primitive and the type of the wrapper class. For example, an attempt to pack a variable of type `byte` into `Short`, without first explicitly casting `byte` ` in `short` will cause a compilation error.
+* Autoboxing of primitive constants allows for wider match boundaries. In this case, the compiler is able to perform implicit widening/narrowing of the primitive type beforehand:
+** implicit widening/narrowing of the original primitive type to the primitive type corresponding to the wrapper class (to convert `int` to `Byte`, the compiler first implicitly narrows `int` to `byte` itself)
+** autoboxing the primitive into the appropriate wrapper class. However, in this case there are two additional restrictions:
+*** assignment of a primitive to a wrapper can only be done using the `=` operator (it is impossible to pass such a primitive to method parameters without explicit type casting)
+*** the type of the left operand must not be older than `Character` , the type of the right one must not be greater than `int`:
+**** allowed widening/narrowing of `byte` to/from `short`, `byte` to/from `char`, `short` to/from `char` and only narrowing `byte` from `int`, `short` from `int`, `char` from `int`. All other variants require explicit type casting).
+
+An additional feature of integer wrapper classes created by autoboxing constants in the range `-128 . .. +127` is that they are cached by the JVM. Therefore, such wrappers with the same values will be references to the same object.

@@ -1,0 +1,7 @@
+ifndef::imagesdir[:imagesdir: ../../imgs]
+ifndef::datatypedir[:datatypedir: ../../examples/src/main/java]
+ifndef::datatypetestdir[:datatypetestdir: ../../examples/src/test/java]
+
+[#java-data-types-boolean]
+==== Boolean
+Класс `Boolean` є обгорткою для примітивного типу `boolean`. Розмір змінної невизначений, тому що це залежить від реалізації віртуальної машини. Зберігає значення `false` та `true`.

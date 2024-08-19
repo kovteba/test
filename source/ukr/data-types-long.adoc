@@ -1,0 +1,7 @@
+ifndef::imagesdir[:imagesdir: ../../imgs]
+ifndef::datatypedir[:datatypedir: ../../examples/src/main/java]
+ifndef::datatypetestdir[:datatypetestdir: ../../examples/src/test/java]
+
+[#java-data-types-long]
+==== Long
+`Long` є обгорткою для примітива `long` і може зберігати діапазон значень від -2^63 до 2^63-1 і буде мати розмір 64 bits.

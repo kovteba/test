@@ -1,0 +1,9 @@
+ifndef::imagesdir[:imagesdir: ../../imgs]
+ifndef::datatypedir[:datatypedir: ../../examples/src/main/java]
+ifndef::datatypetestdir[:datatypetestdir: ../../examples/src/test/java]
+
+[#java-data-types-byte]
+==== Byte
+Значення, які може зберігати така змінна, будуть знаходитися в діапазоні від -128(-2^7) до 127(2^7) і розмір становитиме 8 bit. Клас `Byte` є обгорткою для примітиву byte.
+
+Як що новий екземпляр Byte не потрібен  то краще використовувати метод `valueOf(byte b)`  так як цей метод кешує значення що може поліпшити використання пам'яті та швидкодію.

@@ -1,4 +1,4 @@
-ifndef::imagesdir[:imagesdir: ../docs/imgs]
+
 ifndef::sourcedir[:sourcedir: ../source]
 
 = JAVA Developer Notes
@@ -12,18 +12,16 @@ v1.0, 2012-02-10
 :partnums:
 :sectnums:
 
-//TODO REFACTORING translate in Ukraine
-
-.English
+:lang: eng
+.ENGLISH
 [%collapsible]
 ====
-include::{sourcedir}/eng/abstract-class-eng.adoc[]
+include::source.adoc[]
 ====
 
-== JAVA core
-
-.Russian
+:lang: ukr
+.UKRAINIAN
 [%collapsible]
 ====
-include::{sourcedir}/rus/abstract-class-rus.adoc[]
+include::source.adoc[]
 ====
