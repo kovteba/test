@@ -11,21 +11,15 @@ v1.0, 2012-02-10
 :partnums:
 :sectnums:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue tortor sem, vitae maximus eros egestas sit amet. Sed vestibulum massa leo, et consectetur tellus viverra dignissim. Morbi at commodo dui. Quisque at vulputate dui, sit amet ornare neque. Vivamus venenatis vitae nunc pharetra mollis. Suspendisse in convallis justo. Donec congue dolor lacus, efficitur lobortis lacus bibendum sit amet. Suspendisse potenti. Vivamus tempor neque justo, sit amet dictum magna dictum nec. Aliquam nec odio blandit urna malesuada sollicitudin. Praesent condimentum sed tortor at gravida.
 
-Donec iaculis quis lectus vel mattis. Nullam vitae enim ac ipsum fringilla hendrerit. Sed vel orci sapien. Vivamus vulputate massa vel scelerisque aliquet. Sed magna felis, lobortis in urna et, blandit facilisis nibh. Suspendisse scelerisque ultricies tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-Donec sit amet ornare enim, eu tempor metus. Etiam viverra sollicitudin diam. Etiam pharetra in risus non posuere. Cras blandit nibh mi, placerat vestibulum sem auctor et. In nec sem ac risus pulvinar dignissim eu sit amet elit. Mauris aliquet eros in porta pulvinar. Maecenas euismod imperdiet neque. Duis eu eros ut arcu aliquam rhoncus sit amet ullamcorper justo. Duis lobortis odio non sem malesuada pellentesque. Nulla ultrices imperdiet arcu sit amet consequat. Vivamus in dolor ligula.
+include::english.adoc[]
 
-Duis ultrices, velit sit amet pretium ultrices, metus arcu mollis ligula, sed venenatis elit ipsum et risus. Pellentesque placerat justo urna, vitae efficitur sem dignissim ut. Quisque eu felis vitae mi efficitur varius sit amet eget eros. Curabitur nec nulla id quam vestibulum accumsan. Fusce nec nunc ex. Phasellus et elementum ante, sed scelerisque purus. Sed metus mi, sollicitudin sit amet purus nec, commodo euismod neque. Curabitur tellus velit, posuere vitae leo quis, tincidunt viverra turpis. Mauris sagittis, leo eget ultrices ultrices, tellus enim semper velit, at dignissim neque enim vel ante. In hac habitasse platea dictumst. Integer ut enim a arcu ultricies cursus.
-
+'''
 
 Introduced in different languages:
 
-- link:english.html[eng]
-- link:ukrainian.html[ekr]
-
-
+- link:ukrainian.html[ukr]
 
 // :lang: eng
 // .ENGLISH
