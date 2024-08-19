@@ -1,0 +1,7 @@
+ifndef::imagesdir[:imagesdir: ../../imgs]
+ifndef::datatypedir[:datatypedir: ../../examples/src/main/java]
+ifndef::datatypetestdir[:datatypetestdir: ../../examples/src/test/java]
+
+[#java-data-types-short]
+==== Short
+Значення, які може зберігати така змінна, будуть знаходитися в діапазоні від -32768 до 32767 і розмір становитиме 16 bits. Для операцій над типом даних short використовується 32 бітна арифметика тобто як для `int`, тому і результат буде у 32 бітній формі.

@@ -1,0 +1,9 @@
+ifndef::imagesdir[:imagesdir: ../../imgs]
+ifndef::datatypedir[:datatypedir: ../../examples/src/main/java]
+ifndef::datatypetestdir[:datatypetestdir: ../../examples/src/test/java]
+
+[#java-data-types-float]
+==== Float
+Значення які може зберігати зміна лежать від 2^-149 до 2^127, і має розмір 32 bits.
+
+//TODO how many digits after doc
